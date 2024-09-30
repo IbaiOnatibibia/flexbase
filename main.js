@@ -1,3 +1,4 @@
+window.onload = () => {
 let lista = [
     {
       "isbn": "1617293563",
@@ -31,4 +32,35 @@ let lista = [
       "filename": "8507716-M.jpg"
     }
   ]
-
+ let ind =0;
+ let argazkia = document.getElementById("argazkia");
+ let izenburua = document.getElementById("izenburu_text");
+ let egilea = document.getElementById("Egilea_text");
+ let ISBN = document.getElementById("ISBN_text");
+ let data = document.getElementById("Data_text");
+ let ezkerr_botoi = document.getElementById("ezkerr_botoi");
+ let eskuin_botoi = document.getElementById("eskuin_botoi");
+  //argazkia.style.backgroundImage = "url(images/)";
+  izenburua.value=lista[ind].izenburua
+  egilea.value=lista[ind].egilea
+  ISBN.value=lista[ind].isbn
+  data.value=lista[ind].data
+  right = ()=>{
+    ind++;
+    if(ind==lista.length) ind=0;
+    aldatu();
+  }
+  left = ()=>{
+    ind--;
+    if(ind<0) ind=lista.length - 1;
+    aldatu();
+  }
+  aldatu = ()=>{
+    izenburua.value=lista[ind].izenburua
+    egilea.value=lista[ind].egilea
+    ISBN.value=lista[ind].isbn
+    data.value=lista[ind].data
+  }
+  ezkerr_botoi.addEventListener("click",left);
+  eskuin_botoi.addEventListener("click", right);
+}
