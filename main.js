@@ -57,11 +57,11 @@ window.onload = () => {
     aldatu();
   }
   aldatu = ()=>{
+    argazkia.style.backgroundImage = `url(https://covers.openlibrary.org/b/id/${lista[ind].filename}`;
     izenburua.value=lista[ind].izenburua
     egilea.value=lista[ind].egilea
     ISBN.value=lista[ind].isbn
     data.value=lista[ind].data
-    
   }
   ezkerr_botoi.addEventListener("click",left);
   eskuin_botoi.addEventListener("click", right);
